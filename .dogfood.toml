@@ -1,0 +1,19 @@
+[portal]
+base_url = "http://localhost:8000"
+
+[tiers]
+claimed = ["T1", "T2"]
+pitch = "Self-hosted hackathon management with backend-enforced judge isolation, auditable judging, community voting, APIs and exports."
+
+[auth]
+organizer = "X-Role: organizer"
+judge_a = "X-Role: judge_a"
+judge_b = "X-Role: judge_b"
+participant = "X-Role: participant"
+
+[routes]
+gallery = "/api/gallery"
+submit = "/api/submit"
+judge_scores = "/api/judge-scores"
+peer_scores = "/api/peer-scores"
+csv_export = "/api/csv-export"

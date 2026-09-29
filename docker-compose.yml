@@ -1,0 +1,12 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8001:8000"
+    environment:
+      DATABASE_URL: sqlite:///./data/arbitra.db
+    volumes:
+      - arbitra_full_data:/app/data
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+volumes:
+   arbitra_full_data:
